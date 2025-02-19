@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joint Venture</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/pp.png" type="image/svg+xml">
+    <!---google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"rel="stylesheet">
+</head>
+
+<header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="index.html" class="logo">
+        <img src="./assets/images/logo.png" alt="Ridex logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Explore cars</a>
+          </li>
+
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Joint Venture</a>
+          </li>
+
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Bookings</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">+1 (346) 434-2810</a>
+
+          <span class="contact-time">Mon - Sun: 8:00 am - 6:00 pm</span>
+        </div>
+
+        <a href="index.html" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Explore cars</span>
+        </a>
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+</header>
+
+<body>
+    <div class="joint_venture">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Intro</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <p>Apex Auto Rentals Joint Venture Program.</p>
+                            <p>Eligible Vehicles for venturing:</p>
+                              <br>
+                                <ul>
+                                  <li>&#8226; Luxury & Exotic Cars - Lamborghini, Ferrari, Rolls-Royce, McLaren, etc.</li>
+                                  <br>
+                                  <li>&#8226; Premium Sedans & SUVs – Mercedes-Benz, BMW, Audi, Cadillac, Range Rover, etc.</li>
+                                    <br>
+                                  <li>&#8226; Performance & Sports Cars – Chevrolet Corvette, Dodge Charger/Challenger Hellcat, Ford Mustang GT, etc.</li>
+                                    <br>
+                                  <li>&#8226; Reliable Daily Drivers – Toyota Camry, Honda Accord, Nissan, etc.</li>
+                                    <br>
+                                </ul>
+
+                            <p>
+                                Why Partner With Us?
+                                <br>
+                                ✔ Passive Income – Earn money while we handle operations.
+                                <br>
+                                ✔ Professional Management – We manage bookings, maintenance, and customer service.
+                                <p>Whether you own one vehicle or an entire fleet, Apex Auto Rentals ensures your car works for you. Let’s build something great together!</p>
+                                <p>Interested? Click Register above to get started!</p>
+                            </p>
+                        </form>
+
+                        <!-- <div class="contact-right">
+                            <form name='submit-to-google-sheet' id="RegForm">
+                                <img src="assets/images/logo.png" alt="">
+                                <label for="input-1" class="input-labal">Enter your name</label>
+                                <input type="text" name="Name" placeholder="Enter your name" required>
+                                <label for="input-1" class="input-labal">Enter your email</label>
+                                <input type="email" name="Email" placeholder="Enter your email" required>
+                                <label for="input-1" class="input-labal">Your Phone Number</label>
+                                <input type="text" name="Phone Number" placeholder="Your Phone Number" required>
+                                <label for="input-1" class="input-labal">What kind of vehicle.</label>
+                                <input type="text" name="Vehicle" placeholder="What kind of vehicle are you looking to venture with us?" required>
+                                <label for="input-1" class="input-labal">What state?</label>
+                                <input type="text" name="State" placeholder="What state is the vehicle registered to?" required>
+                                <label for="input-1" class="input-labal">How soon do you want to start?</label>
+                                <input type="text" name="Starting" placeholder="How soon?" required>
+                                <button type="submit" class="btn2">Submit</button>
+                                <span id="msg"></span>
+                            </form>
+                        </div> -->
+
+                        <div class="contact-right">
+                            <form name='submit-to-google-sheet' id="RegForm" method="POST" action="send_email.php">
+                                <img src="assets/images/logo.png" alt="">
+                                <label for="input-1" class="input-labal">Enter your name</label>
+                                <input type="text" name="Name" placeholder="Enter your name" required>
+                                <label for="input-1" class="input-labal">Enter your email</label>
+                                <input type="email" name="Email" placeholder="Enter your email" required>
+                                <label for="input-1" class="input-labal">Your Phone Number</label>
+                                <input type="text" name="Phone Number" placeholder="Your Phone Number" required>
+                                <label for="input-1" class="input-labal">What kind of vehicle.</label>
+                                <input type="text" name="Vehicle" placeholder="What kind of vehicle are you looking to venture with us?" required>
+                                <label for="input-1" class="input-labal">What state?</label>
+                                <input type="text" name="State" placeholder="What state is the vehicle registered to?" required>
+                                <label for="input-1" class="input-labal">How soon do you want to start?</label>
+                                <input type="text" name="Starting" placeholder="How soon?" required>
+                                <button type="submit" class="btn2">Submit</button>
+                                <span id="msg"></span>
+                            </form>
+                        </div>
+                        <div id="msg"></div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h1>Investors Earnings ↓</h1>
+                    <img src="assets/images/33.jpg" width="100%">
+                    <img src="assets/images/44.jpg" width="100%">
+                    <img src="assets/images/55.jpg" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!---#FOOTER-->
+
+  <footer class="footer" id="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#" class="logo2">
+            <img src="./assets/images/logo.png" alt="Ridex logo">
+          </a>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+  
+            <li>
+              <a href="https://www.google.com/maps/place/2808+Telephone+Rd,+Houston,+TX+77023,+USA/@29.7158284,-95.3222109,17z/data=!3m1!4b1!4m6!3m5!1s0x8640be70144cadf1:0xc6623b2986831069!8m2!3d29.7158284!4d-95.3196306!16s%2Fg%2F11cskgxxl_?entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D" class="footer-link">2808 Telephone Rd <br>Houston <br>TX 77023 <br>United States</a>
+            </li>
+  
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.instagram.com/apexautorentals_?igsh=MTZ5NW1maDNvcDR2NQ%3D%3D&utm_source=qr" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFPnLLHXXlVmVRGHhghnsvsFSLtBKTxthpQfsMkmnBDHCpKHmVPKhDwGmqhsmmzmNSVKn" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="copyright">
+          &copy; 2025 <a href="#home">Apex Auto Rentals</a>. All Rights Reserved
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login(){
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyPH8InlCi_6S5vRrPrRJN-jGvM_AYngxeK23eijTqHbAw8yVekNWI-rXZ1qe1d6nRt/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")  
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script> -->
+
+    <script>
+        const form = document.getElementById('RegForm');
+        const msg = document.getElementById("msg");
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+        
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => response.text())
+            .then(data => {
+                msg.innerHTML = data; // Show the response from the PHP script
+                setTimeout(function(){
+                    msg.innerHTML = "";
+                }, 5000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+        </script>
+</body>
+</html>
